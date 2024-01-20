@@ -146,6 +146,15 @@ header button{
     display: none;
 }
 
+#user-section h2 , #computer-section h2{
+    font-size: 18px;
+    justify-content: space-evenly;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: #161925;
+    display: none;
+}
+
 #output{
     margin-bottom: 20px;
     display: none;
@@ -171,4 +180,10 @@ header button{
     border: transparent;
     color: #161925;
     font-size: 13px
+}
+
+.specs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

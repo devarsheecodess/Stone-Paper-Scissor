@@ -20,6 +20,13 @@ let computerSec = document.getElementById("computer")
 
 let count = 0
 
+let userTxt = document.getElementById("user-text")
+let computerTxt = document.getElementById("computer-text")
+
+//Restrict downloading of PNG files
+document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+});
 
 //Theme
 function toggle() {
@@ -48,6 +55,9 @@ function toggle() {
         score.style.color = "#374A67"
 
         refreshBtn.style.color = "white"
+
+        userTxt.style.color = "#F1D302"                          
+        computerTxt.style.color = "#F1D302"                          
     } else{
         // Light-mode
         document.body.style.backgroundColor = "#c2bdec"
@@ -74,6 +84,9 @@ function toggle() {
         
         refreshBtn.style.color = "#161925"
         refreshBtn.style.color = "rgb(73, 11, 11)"
+
+        userTxt.style.color =  "#161925"               
+        computerTxt.style.color =  "#161925"  
     }
     count++
 }
@@ -88,7 +101,7 @@ if(time >= 0 && time < 4 || time > 15 && time < 24){
     // Good evening
     greet.innerHTML = "Good Evening!"
 }
-else if(time > 6 && time < 12){
+else if(time > 4 && time < 12){
     // Good morning
     greet.innerHTML = "Good Morning!"
 }
@@ -199,6 +212,8 @@ else if(computerChoice == "scissor" && userChoice == "paper"||
     score.innerHTML = `${userScore} - ${computerScore}`
     if(userScore >= 1 || computerScore >= 1){
         refreshBtn.style.display = "block"
+        userTxt.style.display =  "block"               
+        computerTxt.style.display =  "block"
     }
 }
 
